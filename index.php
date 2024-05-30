@@ -39,17 +39,15 @@
         <h2>Solución</h2>
         <p>Para calcular el semieje mayor (a) en kilómetros:</p>
         <p>a = raíz cúbica(T²) UA</p>
-        <form method="post" action="">
-          <button type="submit" name="calcular">Presiona para calcular</button>
-        </form>
+      </section>
+      <section class="resultado">
+        <h2>Resultado:</h2>
         <?php
-        if (isset($_POST['calcular'])) {
             $T = 29.5;
             $UA = 150000000; // 150 millones de Km
             $a = pow($T * $T, 1/3);
             $resultado = $a * $UA;
             echo "<div id='resultadoA'>El semieje mayor es: " . number_format($resultado, 2) . " Km</div>";
-        }
         ?>
       </section>
     </section>
